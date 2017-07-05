@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@drawable/side_nav_bar"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <RelativeLayout
+        android:id="@+id/mainscreen_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/startup_bg" />
+
+        <View
+            android:id="@+id/main_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#90000000" />
+
+        <com.farhansoftware.developershub.custom.RobotoTextView
+            android:id="@+id/mainscreen_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Developer's Hub"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:layout_alignLeft="@+id/mainscreen_user_pic"
+            android:layout_alignStart="@+id/mainscreen_user_pic"
+            android:layout_above="@+id/mainscreen_user_email" />
+
+        <com.farhansoftware.developershub.custom.RobotoTextView
+            android:id="@+id/mainscreen_user_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Login / Register"
+            android:layout_alignLeft="@+id/mainscreen_user_name"
+            android:layout_alignStart="@+id/mainscreen_user_name"
+            android:layout_alignParentBottom="true" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/mainscreen_user_pic"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/dummy_user_pic"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/mainscreen_user_name" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/startup_bg">
+
+    <View
+        android:id="@+id/opacityFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black"
+        android:alpha="0.7">
+    </View>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <com.farhansoftware.developershub.custom.RobotoTextView
+            android:text="Register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/register_register_textview"
+            android:textSize="40sp"
+            android:textStyle="normal|bold"
+            android:layout_marginTop="20dp"
+            app:font="robolt.ttf"
+            android:textColor="#fff" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/register_name_edittext"
+                android:hint="Your Name"
+                android:background="@drawable/edit_text_selector"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:maxLength="20" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:id="@+id/register_emailid_edittext"
+                android:hint="Email ID"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_text_selector"
+                android:textColor="#fff"
+                android:textColorHint="#fff" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:maxLength="15"
+                android:id="@+id/register_password_edittext"
+                android:hint="Password"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_text_selector"
+                android:textColor="#fff"
+                android:textColorHint="#fff" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:maxLength="15"
+                android:id="@+id/register_repswd_edittext"
+                android:hint="Re-enter Password"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_text_selector"
+                android:textColor="#fff"
+                android:textColorHint="#fff" />
+
+            <Button
+                android:text="Register"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/register_register_button"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/register_btn_selector"
+                android:elevation="11dp"
+                android:textSize="24sp"
+                android:typeface="monospace"
+                android:fontFamily="monospace" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="40dp">
+
+                <TextView
+                    android:text="Already have an Account?  "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView"
+                    android:textSize="18sp"
+                    android:textColor="#fff"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/register_login_textview"
+
+                    android:text="@string/loginunderline"
+                    android:textSize="18sp"
+                    android:textColor="#fff" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

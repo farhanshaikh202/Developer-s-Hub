@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/my_profile_top"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/startup_bg">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/startup_bg" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#90000000" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/edit_profile_user_pic"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:src="@drawable/dummy_user_pic" />
+
+
+            <EditText
+                android:layout_margin="8dp"
+                android:id="@+id/edit_profile_name_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/edit_profile_user_pic"
+                android:background="@drawable/edit_text_selector"
+                android:ems="10"
+                android:hint="Your Name"
+                android:inputType="textPersonName"
+                android:maxLength="20"
+                android:textColor="#fff"
+                android:textColorHint="#fff" />
+
+
+            <TextView
+                android:layout_margin="8dp"
+                android:textSize="15sp"
+                android:id="@+id/edit_profil_pwd_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Change Password"
+                android:lines="1"
+                android:textColor="#fff"
+                android:textColorHint="#fff" />
+
+            <Button
+                android:text="SAVE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edit_profile_save_button"
+                android:textColor="@android:color/white"
+                android:layout_margin="10dp"
+                android:background="@drawable/login_btn_selector" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

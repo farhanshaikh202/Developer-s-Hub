@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/my_profile_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_bar_height"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/my_profile_collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+
+            <RelativeLayout
+                android:id="@+id/my_profile_top"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/startup_bg" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#90000000" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/my_profile_user_pic"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/dummy_user_pic" />
+                <LinearLayout
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/my_profile_user_name"
+                    android:layout_alignBottom="@+id/my_profile_user_name"
+                    android:id="@+id/followtemp"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25sp">
+                    <Button
+                        android:visibility="gone"
+                        android:textSize="10sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="   + FOLLOW    "
+                        android:background="@drawable/follow_btn"
+                        android:id="@+id/my_profile_follow_btn"
+                        style="@style/Widget.AppCompat.Button.Small" />
+
+
+                    <Button
+                        android:visibility="gone"
+                        android:textSize="10sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/following_btn"
+                        android:text="   FOLLOWING   "
+                        android:textColor="#212121"
+                        android:id="@+id/my_profile_following_btn"
+                        style="@style/Widget.AppCompat.Button.Small" />
+
+                </LinearLayout>
+
+                <com.farhansoftware.developershub.custom.RobotoTextView
+                    android:id="@+id/my_profile_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/my_profile_user_pic"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:text="Farhan Shaikh"
+                    android:textAppearance="?android:textAppearanceLarge" />
+
+                <com.farhansoftware.developershub.custom.RobotoTextView
+                    android:id="@+id/my_profile_user_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/my_profile_user_name"
+                    android:layout_centerHorizontal="true"
+                    android:text="farhanshaikh202@gmail.com" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/my_profile_user_email"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/my_profile_user_posts"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="-"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="#fff" />
+
+                        <com.farhansoftware.developershub.custom.RobotoTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="    Posts    " />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/my_profile_followers_v"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/my_profile_user_followers"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="-"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="#fff" />
+
+                        <com.farhansoftware.developershub.custom.RobotoTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="Followers" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/my_profile_following_v"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/my_profile_user_following"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="-"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="#fff" />
+
+                        <com.farhansoftware.developershub.custom.RobotoTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="Following" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="parallax"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/my_profile_tabs"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="bottom"
+                app:tabContentStart="72dp"
+                app:tabMinWidth="150dp"
+                app:tabIndicatorHeight="5dp"
+                app:tabMode="fixed" />
+
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/my_profile_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+</android.support.design.widget.CoordinatorLayout>

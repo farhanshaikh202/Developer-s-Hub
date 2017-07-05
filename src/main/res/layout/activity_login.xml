@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/startup_bg">
+
+    <View
+        android:id="@+id/opacityFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black"
+        android:alpha="0.7">
+    </View>
+
+    <com.farhansoftware.developershub.custom.RobotoTextView
+        android:text="Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:id="@+id/login_login_textview"
+        android:textSize="40sp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"
+        app:font="robolt.ttf"
+        android:textColor="#fff" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:weightSum="1">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/login_email_edittext"
+            android:hint="Email Id"
+            android:background="@drawable/edit_text_selector"
+            android:textColor="#fff"
+            android:textColorHint="#fff" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="15"
+            android:id="@+id/login_pswd_edittext"
+            android:hint="Password"
+            android:background="@drawable/edit_text_selector"
+            android:textColorHint="#fff"
+            android:textColor="#fff"
+            android:maxLength="15"
+            android:layout_marginTop="10dp" />
+
+        <Button
+            android:text="Login"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/login_login_button"
+            android:background="@drawable/login_btn_selector"
+            android:layout_marginTop="20dp"
+            android:typeface="monospace"
+            android:textSize="24sp"
+            android:fontFamily="sans-serif"
+            android:textColor="#fff"
+            android:elevation="11dp" />
+
+
+        <TextView
+            android:text="@string/forgotpwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/login_forgotpswd_textview"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:clickable="true"
+            android:gravity="right"
+            android:layout_marginTop="15dp"
+            android:textColor="#fff" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp">
+
+        <TextView
+            android:text="Not registered yet?  "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            android:layout_weight="1.00"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:text="@string/registerunderline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/login_register_textview"
+            android:layout_weight="1"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+    </LinearLayout>
+</RelativeLayout>

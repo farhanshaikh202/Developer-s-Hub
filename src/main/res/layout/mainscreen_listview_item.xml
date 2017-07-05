@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:padding="5dp">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mainscreen_post_cardview"
+        app:cardCornerRadius="5dp"
+        android:elevation="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@+id/main_layout_root">
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/main_layout_root"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:layout_marginTop="10dp"
+        android:baselineAligned="false"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="?attr/selectableItemBackground"
+                android:src="@mipmap/ic_launcher"
+                android:id="@+id/mainscreen_listview_item__usrimg_imageview"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp" />
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:textSize="12sp"
+                android:id="@+id/mainscreen_listview_item_subtext"
+                android:background="?attr/selectableItemBackground"
+                android:layout_below="@+id/mainscreen_listview_item_usernm_textview"
+                android:layout_alignLeft="@+id/mainscreen_listview_item_usernm_textview"
+                android:layout_alignStart="@+id/mainscreen_listview_item_usernm_textview"
+                android:layout_toLeftOf="@+id/mainscreen_listview_item_menu_imgbtn"
+                android:layout_toStartOf="@+id/mainscreen_listview_item_menu_imgbtn" />
+
+            <ImageButton
+                app:srcCompat="@mipmap/mainscreen_listview_item_menubtn"
+                android:id="@+id/mainscreen_listview_item_menu_imgbtn"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:layout_width="50dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_alignTop="@+id/mainscreen_listview_item__usrimg_imageview"
+                android:layout_height="10dp"
+                android:layout_alignBottom="@+id/mainscreen_listview_item__usrimg_imageview" />
+
+
+            <TextView
+                android:text="Farhan Shaikh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/mainscreen_listview_item_usernm_textview"
+                android:textColor="@android:color/black"
+                android:background="?attr/selectableItemBackground"
+                android:layout_toLeftOf="@id/mainscreen_listview_item_menu_imgbtn"
+                android:layout_toStartOf="@id/mainscreen_listview_item_menu_imgbtn"
+                android:layout_toRightOf="@+id/mainscreen_listview_item__usrimg_imageview"
+                android:layout_toEndOf="@+id/mainscreen_listview_item__usrimg_imageview" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/mainscreen_listview_item_posttitle_tv"
+                android:textColor="#ff000000"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:id="@+id/mainscreen_lv_item_postimg_imgview"
+                android:scaleType="fitCenter"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/image_bbg"
+                android:elevation="10dp"
+                android:layout_height="180dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="15dp"
+            android:layout_height="50dp">
+
+            <LinearLayout
+                android:id="@+id/mainscreen_listview_item_like_root"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+            <TextView
+                android:text="12"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/mainscreen_listview_item_like_text"
+                android:maxLines="1"
+                android:textColor="#d50000"
+                android:drawableLeft="@drawable/ic_like_15dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textAlignment="center"
+                android:gravity="center" />
+            </LinearLayout>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="15dp"
+                android:background="#ccc"/>
+            <LinearLayout
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+            <TextView
+                android:text="15"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/mainscreen_listview_item_comments_txt"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="#607d8b"
+                android:drawableLeft="@drawable/ic_comment_8dp"
+                android:textAlignment="center"
+                android:gravity="center" />
+                </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="15dp"
+                android:background="#ccc"/>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+            <TextView
+                android:text="12"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/mainscreen_listview_item_rating_text"
+                android:maxLines="1"
+                android:drawableLeft="@drawable/ic_star_15dp"
+                android:textColor="#ffaa00"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textAlignment="center"
+                android:gravity="center" />
+                </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

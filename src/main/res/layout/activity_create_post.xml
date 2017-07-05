@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_create_post"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.farhansoftware.developershub.activities.CreatePost">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/post_up_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="Title"
+                    android:inputType="textPersonName"
+                    android:maxLength="300"
+                    android:padding="8dp"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Select Category" />
+
+                <Spinner
+                    android:id="@+id/post_up_categor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Add ScreenShot or Images" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:id="@+id/post_up_ss_root"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/post_up_ss_add"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            app:srcCompat="@drawable/ic_menu_gallery" />
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Description" />
+
+                <com.onegravity.rteditor.RTEditText
+                    android:id="@+id/rtEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="110dp"
+                    android:background="#fff"
+                    android:imeOptions="actionDone|flagNoEnterAction"
+                    android:inputType="textMultiLine|textAutoCorrect|textCapSentences" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Download URL for library" />
+                <EditText
+                    android:id="@+id/create_post_dnld_url"
+                    android:maxLength="300"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="http://www.abc.com"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/rte_toolbar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <include layout="@layout/rte_toolbar_character" />
+
+        <include layout="@layout/rte_toolbar_paragraph" />
+
+    </LinearLayout>
+</RelativeLayout>
