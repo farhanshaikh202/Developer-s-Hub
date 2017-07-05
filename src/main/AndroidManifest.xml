@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.farhansoftware.developershub">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application xmlns:tools="http://schemas.android.com/tools"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon">
+        <activity
+            android:name=".activities.wizard"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".activities.Startup"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".activities.Login"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".activities.Register"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".activities.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.OTPverify" />
+        <activity
+            android:name=".activities.MyProfile"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".activities.CategoryPosts"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.ViewPost"
+            android:theme="@style/AppTheme2">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="developers-hub.pe.hu" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.CreatePost"
+            android:label="Create Post" />
+        <activity android:name="com.onegravity.rteditor.media.choose.MediaChooserActivity" />
+        <activity android:name="com.onegravity.rteditor.media.crop.CropImageActivity" />
+        <activity
+            android:name=".activities.AboutUs"
+            android:label="About Us" />
+        <activity
+            android:name=".activities.ChangePassword"
+            android:label="Change Password" />
+        <activity
+            android:name=".activities.EditProfile"
+            android:label="Edit Profile" />
+        <activity
+            android:name=".activities.ForgotPassword"
+            android:label="Forgot Password" />
+        <activity
+            android:name=".activities.Followers"
+            android:label="Followers" />
+        <activity
+            android:name=".activities.Following"
+            android:label="Following" />
+        <activity
+            android:name=".activities.ViewImage"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activities.CategorySelection"></activity>
+    </application>
+
+</manifest>
